@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package com.mycompany.ge3.windows;
+package Windows;
 
 /**
  *
@@ -11,7 +7,7 @@ package com.mycompany.ge3.windows;
 public class Menu extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainMenu
+     * Creates new form Menu
      */
     public Menu() {
         initComponents();
@@ -26,30 +22,30 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonSearchLocation = new javax.swing.JButton();
+        jButton2showSearchHistory = new javax.swing.JButton();
+        jButton3WeatherStats = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Αναζήτηση Τοποθεσίας");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSearchLocation.setText("Αναζήτηση Τοποθεσίας");
+        jButtonSearchLocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonSearchLocationActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Προβολή Ιστορικού Αναζήτησης");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton2showSearchHistory.setText("Προβολή Ιστορικού Αναζήτησης");
+        jButton2showSearchHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton2showSearchHistoryActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Στατιστικά Καιρού");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton3WeatherStats.setText("Στατιστικά Καιρού");
+        jButton3WeatherStats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton3shoWeatherStatsActionPerformed(evt);
             }
         });
 
@@ -60,42 +56,42 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3WeatherStats, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2showSearchHistory, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(jButtonSearchLocation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(jButtonSearchLocation)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(jButton2showSearchHistory)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jButton3WeatherStats)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
+    
+    private void jButtonSearchLocationActionPerformed(java.awt.event.ActionEvent evt) {                                                      
+        LocationSearch.showLocationSearch();
+    }
+    
+    private void jButton2showSearchHistoryActionPerformed(java.awt.event.ActionEvent evt) {                                                          
+        SearchHistory.showSearchHistory();
+    }
+    
+    private void jButton3shoWeatherStatsActionPerformed(java.awt.event.ActionEvent evt){
+        WeatherStats.showWeatherStats();
+    }
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void showMenu() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -118,7 +114,6 @@ public class Menu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -127,10 +122,10 @@ public class Menu extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton2showSearchHistory;
+    private javax.swing.JButton jButton3WeatherStats;
+    private javax.swing.JButton jButtonSearchLocation;
     // End of variables declaration//GEN-END:variables
 }
